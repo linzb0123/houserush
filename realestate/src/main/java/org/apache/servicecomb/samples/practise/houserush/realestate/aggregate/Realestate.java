@@ -1,4 +1,4 @@
-package org.apache.servicecomb.samples.practise.houserush.aggregate;
+package org.apache.servicecomb.samples.practise.houserush.realestate.aggregate;
 
 
 import lombok.Data;

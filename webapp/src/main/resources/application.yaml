@@ -18,6 +18,8 @@
 zuul:
   routes:
     realestate: /realestate/**
+    customer-manage: /customer-manage/**
+
 
 # disable netflix eurkea since it's not used for service discovery
 ribbon:

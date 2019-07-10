@@ -1,7 +1,9 @@
-package org.apache.servicecomb.samples.practise.houserush.aggregate;
+package org.apache.servicecomb.samples.practise.houserush.realestate.aggregate;
 
 import lombok.Data;
 import org.springframework.data.annotation.CreatedDate;
+import org.springframework.data.annotation.LastModifiedBy;
+import org.springframework.data.annotation.LastModifiedDate;
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -34,7 +36,7 @@ public class Building {
     @Temporal(TemporalType.TIMESTAMP)
     private Date createdAt;
 
-    @CreatedDate
+    @LastModifiedDate
     @Temporal(TemporalType.TIMESTAMP)
     private Date updatedAt;
 
