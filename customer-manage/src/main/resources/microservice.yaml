@@ -20,8 +20,8 @@
 APPLICATION_ID: houserush
 service_description:
 # name of the declaring microservice
-  name: calculator
-  version: 0.0.1
+  name: customer-manage
+  version: 0.0.2
 servicecomb:
   service:
     registry:

@@ -1,6 +1,6 @@
-package org.apache.servicecomb.samples.practise.houserush.service;
+package org.apache.servicecomb.samples.practise.houserush.realestate.service;
 
-import org.apache.servicecomb.samples.practise.houserush.aggregate.Realestate;
+import org.apache.servicecomb.samples.practise.houserush.realestate.aggregate.Realestate;
 
 public interface RealestateService {
     Realestate createRealesate(Realestate realestate);
