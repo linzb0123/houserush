@@ -1,4 +1,5 @@
-package org.apache.servicecomb.samples.practise.houserush.customer.manage.aggregate;
+package org.apache.servicecomb.samples.practise.houserush.sale.aggregate;
+
 import lombok.Data;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
@@ -11,22 +12,22 @@ import java.util.List;
 
 @Data
 @Entity
-@Table(name="customers")
-public class Customer {
+@Table(name = "sales")
+public class Sale {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
 
-    private String phone;
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date beginAt;
 
-    private String realName;
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date endAt;
 
-    private String address;
+    @OneToMany(mappedBy = "sale")
+    private List<HouseOrder> houses = new ArrayList<>();
 
-
-    @OneToMany(mappedBy = "customer")
-    private List<Qualification> qualifications = new ArrayList<>();
-
+    private Integer realestateId;
 
     @Temporal(TemporalType.TIMESTAMP)
     private Date deletedAt;
@@ -38,6 +39,5 @@ public class Customer {
     @LastModifiedDate
     @Temporal(TemporalType.TIMESTAMP)
     private Date updatedAt;
-
 
 }

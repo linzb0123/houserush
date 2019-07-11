@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 public class RealestateApiRestImpl implements RealestateApi {
 
     @Autowired
-    private  RealestateService realestateService;
+    private RealestateService realestateService;
 
     @PostMapping("/realestates")
     public Realestate createRealestate(@RequestBody Realestate realestate) {

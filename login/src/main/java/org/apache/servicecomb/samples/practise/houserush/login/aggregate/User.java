@@ -1,32 +1,24 @@
-package org.apache.servicecomb.samples.practise.houserush.customer.manage.aggregate;
+package org.apache.servicecomb.samples.practise.houserush.login.aggregate;
+
+
 import lombok.Data;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
 
 import javax.persistence.*;
-import java.util.ArrayList;
 import java.util.Date;
-import java.util.List;
-
 
 @Data
 @Entity
-@Table(name="customers")
-public class Customer {
+@Table(name = "users")
+public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
 
-    private String phone;
+    private String username;
 
-    private String realName;
-
-    private String address;
-
-
-    @OneToMany(mappedBy = "customer")
-    private List<Qualification> qualifications = new ArrayList<>();
-
+    private String hashedPassword;
 
     @Temporal(TemporalType.TIMESTAMP)
     private Date deletedAt;
@@ -38,6 +30,5 @@ public class Customer {
     @LastModifiedDate
     @Temporal(TemporalType.TIMESTAMP)
     private Date updatedAt;
-
 
 }

@@ -25,13 +25,24 @@
   </parent>
   <modelVersion>4.0.0</modelVersion>
 
-  <artifactId>houserush-sale</artifactId>
-  <name>Java Chassis::Samples::Practice::HouseRush-Sale</name>
+  <artifactId>houserush-house-order</artifactId>
+  <name>Java Chassis::Samples::Practice::HouseRush-House-Order</name>
 
   <dependencies>
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-data-jpa</artifactId>
+    </dependency>
+
+
+    <dependency>
+      <groupId>mysql</groupId>
+      <artifactId>mysql-connector-java</artifactId>
     </dependency>
 
     <dependency>

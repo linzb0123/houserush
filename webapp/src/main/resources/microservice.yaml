@@ -25,5 +25,5 @@ service_description:
 servicecomb:
   service:
     registry:
-      address: http://192.168.88.140:30100
+      address: http://127.0.0.1:30100
 

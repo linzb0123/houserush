@@ -2,7 +2,6 @@ package org.apache.servicecomb.samples.practise.houserush.realestate.aggregate;
 
 import lombok.Data;
 import org.springframework.data.annotation.CreatedDate;
-import org.springframework.data.annotation.LastModifiedBy;
 import org.springframework.data.annotation.LastModifiedDate;
 
 import javax.persistence.*;
