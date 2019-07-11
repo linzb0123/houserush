@@ -29,7 +29,7 @@
     <module>customer-manage</module>
     <module>login</module>
     <module>realestate</module>
-    <module>sale</module>
+    <module>house-order</module>
     <module>user-center</module>
     <module>webapp</module>
   </modules>
