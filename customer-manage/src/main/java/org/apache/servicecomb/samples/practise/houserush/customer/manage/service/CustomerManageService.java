@@ -14,5 +14,7 @@ public interface CustomerManageService {
 
     void removeCustomer(int id);
 
+    List<Customer> indexCustomers();
+
     boolean updateCustomerQualifications(Customer customer, List<Qualification> qualifications);
 }

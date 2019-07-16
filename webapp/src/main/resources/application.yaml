@@ -32,3 +32,6 @@ server:
 servicecomb:
   tracing:
     enabled: false
+spring:
+    jackson:
+      property-naming-strategy: SNAKE_CASE

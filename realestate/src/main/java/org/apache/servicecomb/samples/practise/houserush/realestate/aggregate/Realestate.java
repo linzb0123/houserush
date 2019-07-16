@@ -2,6 +2,8 @@ package org.apache.servicecomb.samples.practise.houserush.realestate.aggregate;
 
 
 import lombok.Data;
+import org.hibernate.annotations.SQLDelete;
+import org.hibernate.annotations.Where;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
 
@@ -13,10 +15,12 @@ import java.util.List;
 @Data
 @Entity
 @Table(name = "realestates")
+@SQLDelete(sql = "update realestates set deleted_at = now() where id = ?")
+@Where(clause = "deleted_at is null")
 public class Realestate {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer id;
+    private int id;
 
     @OneToMany(mappedBy = "realestate")
     private List<Building> buildings = new ArrayList<>();

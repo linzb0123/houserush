@@ -15,10 +15,12 @@ public class CustomerManageServiceImpl implements CustomerManageService {
     @Autowired
     private CustomerDao customerDao;
 
+    @Override
     public Customer createCustomer(Customer customer) {
         return customerDao.save(customer);
     }
 
+    @Override
     public Customer updateCustomer(Customer customer) {
         int id = customer.getId();
         if (customerDao.exists(id)) {
@@ -29,15 +31,22 @@ public class CustomerManageServiceImpl implements CustomerManageService {
         }
     }
 
+    @Override
     public Customer findCustomer(int id) {
         return customerDao.findOne(id);
     }
 
+    @Override
     public void removeCustomer(int id) {
         customerDao.delete(id);
-
     }
 
+    @Override
+    public List<Customer> indexCustomers() {
+        return customerDao.findAll();
+    }
+
+    @Override
     public boolean updateCustomerQualifications(Customer customer, List<Qualification> qualifications) {
         customer.setQualifications(qualifications);
         customerDao.save(customer);

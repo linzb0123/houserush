@@ -16,14 +16,12 @@ public class CustomerManageApiRestImpl implements CustomerManageApi {
     private CustomerManageService customerManageService;
 
 
-    @PostMapping("/customers")
+    @PostMapping("customers")
     public Customer createCustomer(@RequestBody Customer customer) {
         return customerManageService.createCustomer(customer);
     }
 
-
-
-    @GetMapping("/customers/{id}")
+    @GetMapping("customers/{id}")
     public Customer findCustomer(@PathVariable int id) {
         return customerManageService.findCustomer(id);
     }
@@ -38,7 +36,12 @@ public class CustomerManageApiRestImpl implements CustomerManageApi {
 
     @DeleteMapping("customers/{id}")
     public void removeCustomer(@PathVariable int id) {
+        customerManageService.removeCustomer(id);
+    }
 
+    @GetMapping("customers")
+    public List<Customer> indexCustomers() {
+        return customerManageService.indexCustomers();
     }
 
     @PutMapping("customers/{id}/update_qualifications")

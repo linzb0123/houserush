@@ -21,7 +21,7 @@ APPLICATION_ID: houserush
 service_description:
 # name of the declaring microservice
   name: customer-manage
-  version: 0.0.7
+  version: 0.0.13
 servicecomb:
   service:
     registry:
@@ -33,6 +33,9 @@ servicecomb:
       Provider:
         default: bizkeeper-provider
 spring:
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss    #或正则yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
   datasource:
     url: jdbc:mysql://127.0.0.1:3306/customer?characterEncoding=utf8&useSSL=false
     driver-class-name: com.mysql.jdbc.Driver
